@@ -65,7 +65,7 @@ onChange(event){
     return (
         <div className="App">
         <div className='Header'>
-          <img src={tick} width={32} alt="tick" value={newItem}/>
+          <img src={tick} width={32} height={32} alt="tick" value={newItem}/>
           <input value={newItem} type='text' placeholder='Add new item' onKeyUp={this.onKeyUp} onChange={this.onChange}/>
         </div>
           {

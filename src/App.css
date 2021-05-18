@@ -1,4 +1,8 @@
-
+.App {
+  width: 300px;
+  margin: 0px auto;
+  margin-top: 10px;
+}
 
 .App-logo {
   height: 40vmin;
@@ -26,11 +30,19 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.Header > input{
+  height: 50px;
+  width: 100%;
+  border: none;
+  font-weight: 300;
+  font-size: 24px;
+  padding-left: 10px;
+  
+}
+.Header > input:hover{
+  outline: none;
+}
+
+.Header { 
+  display: flex;
 }
