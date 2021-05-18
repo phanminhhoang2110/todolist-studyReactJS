@@ -1,6 +1,6 @@
 import './App.css';
 import TodoItem from "./Component/TodoItem";
-import {Component} from "react";
+import React, {Component} from "react";
 import tick from './tick.png';
 
 class App extends Component {
@@ -14,8 +14,12 @@ class App extends Component {
         {title: "Di do xang", isComplete: true}
       ]
     }
+    this.inputElement = React.createRef();
     this.onKeyUp = this.onKeyUp.bind(this)
     this.onChange = this.onChange.bind(this)
+  }
+  componentDidMount(){
+    this.inputElement.current.focus();
   }
   onItemClick(item){
     return (event) =>{
@@ -54,11 +58,11 @@ class App extends Component {
     });
   }
 }
-onChange(event){
-  this.setState(
-    {newItem: event.target.value}
-  );
-}
+  onChange(event){
+   this.setState(
+      {newItem: event.target.value}
+    );
+  }
 
   render() {
     const {todoItems,newItem} = this.state;
@@ -66,7 +70,7 @@ onChange(event){
         <div className="App">
         <div className='Header'>
           <img src={tick} width={32} height={32} alt="tick" value={newItem}/>
-          <input value={newItem} type='text' placeholder='Add new item' onKeyUp={this.onKeyUp} onChange={this.onChange}/>
+          <input ref={this.inputElement} value={newItem} type='text' placeholder='Add new item' onKeyUp={this.onKeyUp} onChange={this.onChange}/>
         </div>
           {
             todoItems.length > 0 &&

@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import './TodoItem.css';
 import check from '../nodone.png';
 import checkDone from '../done.png';
+import propTypes from 'prop-types';
 
 class TodoItem extends Component {
 
@@ -22,6 +23,14 @@ class TodoItem extends Component {
             </div>
         );
     }
+}
+
+TodoItem.prototypes = {
+    item: propTypes.shape({
+        isComplete: propTypes.bool,
+        title: propTypes.string
+    }),
+    onClick: propTypes.func
 }
 
 export default TodoItem

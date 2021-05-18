@@ -43,6 +43,10 @@
   outline: none;
 }
 
+.Header > input:focus{
+  outline: none;
+}
+
 .Header { 
   display: flex;
 }
