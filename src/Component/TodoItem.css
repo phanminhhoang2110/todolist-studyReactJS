@@ -3,9 +3,21 @@
     font-weight: 300;
     font-size: 24px;
     color: #4d4d4d;
+    border: 2px solid black;
+    padding: 10px
 }
 
 .TodoItem-complete {
     text-decoration: line-through;
     opacity: .3;
+}
+
+.TodoItem > img {
+    width: 32px;
+    height: 32px;
+}
+
+.TodoItem > p {
+    display: inline;
+    padding-left: 20px;
 }
